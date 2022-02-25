@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Mini Text Animation </title>
+  <link rel="stylesheet" href="css/index.css">
+  </head>
+<body>
+  <section>
+  <h3 class ="text">-Endless-Cycle-Death</h3>
+</section>
+  </body>
+
+  <script>
+  const text = document.querySelector('.text');
+  text.innerHTML = text.textContent.replace(/\S/g,
+  "<span>$&</span>");
+  const element = document.querySelectorAll('span');
+  for (let i = 0; i<element.length; i++){
+    element[i].style.transform = "rotate("+i*18+"deg)"
+  }
+  </script>
+</html>
